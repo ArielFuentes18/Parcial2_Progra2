@@ -25,7 +25,9 @@ app.get("/", (req, res) => {
   res.json({ message: "Conexion Correcta" });
 });
 
-require("./app/routes/cancion.routes")(app);
+require("./app/routes/libro.routes")(app);
+require("./app/routes/prestamo.routes")(app);
+require("./app/routes/estudiante.routes")(app);
 
 const PORT = process.env.PORT || 8081;
 app.listen(PORT, () => {
